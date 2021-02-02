@@ -16,7 +16,7 @@ NOTE: the account name and password can be changed in database.go by simply chan
 
 -------- USAGE --------
 
-To start the server, run the executable file (do it from the command line or you probably won't see any output).
+To start the server, run the executable file (do it from the command line or you probably won't see any output). The database is automatically created if it doesn't already exist.
 To run the curl tests, start the server and then run the .sh file.
 To run the Go unit tests, cd into the src directory and run go test (you do not need to start the server; it will start itself).
 
@@ -52,3 +52,5 @@ There are plenty of corners I cut for the sake of simplicity. Here are some of t
 
 - Perhaps better file management. Maybe. In a real-life project with more code, I would have made more of an effort to organise the code. I also likely would have added more
     comments and maybe even a header describing what each file does at the top of each file.
+
+- Use a more elegant method to check whether the database already exists or not.
