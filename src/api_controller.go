@@ -12,27 +12,27 @@ func RequestHandlerFunction(w http.ResponseWriter, r *http.Request) {
 	switch(r.URL.Path) {
 		case "/createuser":
 			fmt.Printf("Got createuser request.\n")
-			go HandleCreateUserRequest(w, r)
+			HandleCreateUserRequest(w, r)
 			break
 		case "/updatename":
 			fmt.Printf("Got updatename request.\n")
-			go HandleUpdateNameRequest(w, r)
+			HandleUpdateNameRequest(w, r)
 			break
 		case "/setdarkmode":
 			fmt.Printf("Got setdarkmode request.\n")
-			go HandleSetDarkModeRequest(w, r)
+			HandleSetDarkModeRequest(w, r)
 			break
 		case "/deleteuser":
 			fmt.Printf("Got deleteuser request.\n")
-			go HandleDeleteUserRequest(w, r)
+			HandleDeleteUserRequest(w, r)
 			break
 		case "/listusers":
 			fmt.Printf("Got listusers request.\n")
-			go HandleListUsersRequest(w, r)
+			HandleListUsersRequest(w, r)
 			break
 		case "/searchusers":
 			fmt.Printf("Got searchusers request.\n")
-			go HandleSearchUsersRequest(w, r)
+			HandleSearchUsersRequest(w, r)
 			break
 		default:
 			http.Error(w, "404", http.StatusNotFound)
