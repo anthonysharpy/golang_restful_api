@@ -62,3 +62,5 @@ There are plenty of corners I cut for the sake of simplicity. Here are some of t
     comments and maybe even a header describing what each file does at the top of each file.
 
 - Use a more elegant method to check whether the database already exists or not.
+
+- A randomly generated authcode which is stored in the database. Ideally SHA-256.
