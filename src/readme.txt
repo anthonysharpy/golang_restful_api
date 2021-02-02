@@ -2,7 +2,7 @@ Copyright Anthony Sharp 2021
 
 -------- PREREQUISITES --------
 
-You'll need a few things in order to run this. At the very least, you'll need MySQL, curl, Go and probably a Linux machine.
+You'll need a few things in order to run this. At the very least, you'll need MySQL, curl, Go and probably a 64-bit Linux machine (unless you want to re-build the source).
 
 You'll also need a MySQL account on your computer with sufficient access. To do this, you will probably need to do the following:
 
