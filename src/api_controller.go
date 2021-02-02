@@ -76,6 +76,19 @@ func HandleCreateUserRequest(w http.ResponseWriter, r *http.Request) {
 		var username = r.FormValue("username")
 		var authcode = r.FormValue("authcode")
 
+		if(len(firstname) < 1 || len(firstname) > 50) {
+			fmt.Fprintf(w, "0")
+			return
+		}
+		if(len(lastname) < 1 || len(lastname) > 50) {
+			fmt.Fprintf(w, "0")
+			return
+		}
+		if(len(username) < 6 || len(username) > 20) {
+			fmt.Fprintf(w, "0")
+			return
+		}
+
 		if(CorrectAuthcode(authcode)) {
 			if(CreateUser(firstname, lastname, username, false)) {
 				fmt.Fprintf(w, "1")
@@ -93,6 +106,11 @@ func HandleUpdateNameRequest(w http.ResponseWriter, r *http.Request) {
 		var oldusername = r.FormValue("oldusername")
 		var newusername = r.FormValue("newusername")
 		var authcode = r.FormValue("authcode")
+
+		if(len(newusername) < 6 || len(newusername) > 20) {
+			fmt.Fprintf(w, "0")
+			return
+		}
 
 		if(CorrectAuthcode(authcode)) {
 			if(SetUserName(oldusername, newusername)) {

@@ -254,8 +254,8 @@ func CreateDatabase() bool {
 		return false
 	}
 
-	_,err = database.Exec(`CREATE TABLE users (firstname varchar(20),
-												lastname varchar(20),
+	_,err = database.Exec(`CREATE TABLE users (firstname varchar(50),
+												lastname varchar(50),
 												username varchar(20),
 												timejoined bigint,
 												darkmode boolean)`)
@@ -267,7 +267,7 @@ func CreateDatabase() bool {
 
 	fmt.Printf("Database creation went OK. Now adding default users.\n")
 
-	if(!CreateUser("Donna", "Sandford", "D594", false) || 
+	if(!CreateUser("Donna", "Sandford", "D594MxM", false) || 
 	!CreateUser("Judy", "Sheindlin", "JudgeJudy41", false) || 
 	!CreateUser("Tasha", "Croad", "CCxCTash", false) ||
 	!CreateUser("Steven", "Bradley", "BigBrad4", false) || 
